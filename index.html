@@ -80,9 +80,9 @@
       const { points } = await fused.runPython("./sine.py", { n: "160", freq: String(freq) });
 
       const axis = `<line x1="${PAD}" y1="${H / 2}" x2="${W - PAD}" y2="${H / 2}" stroke="#3a3d44" />`;
-      const line = `<polyline points="${pointsToPolyline(points)}" fill="none" stroke="#3b82f6" stroke-width="2" />`;
+      const line = `<polyline points="${pointsToPolyline(points)}" fill="none" stroke="#ef4444" stroke-width="2" />`;
       current = points;
-      svg.innerHTML = axis + line + '<g id="hover" style="display:none"><line id="hv" y1="0" y2="280" stroke="#5f6368" stroke-dasharray="4 3" /><circle id="hd" r="5" fill="#3b82f6" /><text id="ht" fill="#e8eaed" font-size="12"></text></g>';
+      svg.innerHTML = axis + line + '<g id="hover" style="display:none"><line id="hv" y1="0" y2="280" stroke="#5f6368" stroke-dasharray="4 3" /><circle id="hd" r="5" fill="#ef4444" /><text id="ht" fill="#e8eaed" font-size="12"></text></g>';
     }
 
     svg.addEventListener("mousemove", (e) => {
